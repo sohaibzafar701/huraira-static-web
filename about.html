@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - shopinestllc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        
+        /* Ensure navbar is always visible */
+        body {
+            padding-bottom: 12rem;
+            min-height: 100vh;
+        }
+        
+        /* Ensure footer is always visible */
+        html {
+            min-height: 100vh;
+        }
+        
+        /* Mobile-specific footer visibility */
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 16rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 pt-20">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-xl fixed top-0 left-0 right-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <i class="fas fa-store text-white text-xl"></i>
+                    </div>
+                    <span class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">shopinestllc</span>
+                </a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden w-12 h-12 bg-gray-100 hover:bg-gray-200 rounded-xl flex items-center justify-center transition-all duration-200 group">
+                    <i class="fas fa-bars text-gray-600 text-xl group-hover:text-blue-600 transition-colors duration-200"></i>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- Navigation Links -->
+                    <div class="flex items-center space-x-6">
+                        <a href="index.html" class="relative group">
+                            <span class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">Home</span>
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                        <a href="about.html" class="relative group">
+                            <span class="text-blue-600 font-medium">About</span>
+                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"></span>
+                        </a>
+                        <a href="contact.html" class="relative group">
+                            <span class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">Contact</span>
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-gradient-to-b from-white to-gray-50">
+                <div class="py-6 px-4">
+                    <!-- Mobile Links -->
+                    <div class="space-y-3">
+                        <a href="index.html" class="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-200">
+                                <i class="fas fa-home text-blue-600 text-lg"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-200">Home</span>
+                            <i class="fas fa-chevron-right text-gray-400 ml-auto group-hover:text-blue-600 transition-colors duration-200"></i>
+                        </a>
+                        <a href="about.html" class="flex items-center space-x-3 p-4 bg-blue-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group">
+                            <div class="w-10 h-10 bg-blue-200 rounded-lg flex items-center justify-center group-hover:bg-blue-300 transition-colors duration-200">
+                                <i class="fas fa-info-circle text-blue-600 text-lg"></i>
+                            </div>
+                            <span class="text-blue-600 font-medium">About Us</span>
+                            <i class="fas fa-chevron-right text-blue-400 ml-auto"></i>
+                        </a>
+                        <a href="contact.html" class="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group">
+                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors duration-200">
+                                <i class="fas fa-envelope text-green-600 text-lg"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium group-hover:text-green-600 transition-colors duration-200">Contact</span>
+                            <i class="fas fa-chevron-right text-gray-400 ml-auto group-hover:text-green-600 transition-colors duration-200"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-6">About shopinestllc</h1>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-4">Affiliate Disclosure</h2>
+                <p class="text-lg mb-4">
+                    shopinestllc is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites. When you click on our product links and make a purchase, we may receive a small commission at no additional cost to you. This helps support our site and allows us to continue providing you with quality product recommendations.
+                </p>
+                <p class="text-lg">
+                    We only recommend products that we genuinely believe will provide value to our customers. Our product selections are based on research, customer reviews, and our own analysis of product quality and features.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+                    <p class="text-gray-600 mb-4">
+                        At shopinestllc, we carefully curate the best products from Amazon to help you make informed purchasing decisions. Our team of experts reviews thousands of products to bring you only the highest quality items.
+                    </p>
+                    <p class="text-gray-600">
+                        We believe in honest reviews and transparent recommendations. No hidden agendas, just genuine advice to help you find the perfect products for your needs.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-100 to-purple-100 p-8 rounded-2xl">
+                    <div class="grid grid-cols-2 gap-6 text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600">50K+</div>
+                            <div class="text-gray-600">Happy Customers</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-purple-600">10K+</div>
+                            <div class="text-gray-600">Products Reviewed</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-green-600">500+</div>
+                            <div class="text-gray-600">Trusted Brands</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-orange-600">5+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Trust & Transparency</h3>
+                    <p class="text-gray-600">We believe in honest reviews and transparent recommendations. No hidden agendas, just genuine advice.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Curation</h3>
+                    <p class="text-gray-600">Our team of experts carefully reviews and selects only the highest quality products for our customers.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Customer Focus</h3>
+                    <p class="text-gray-600">Your satisfaction is our priority. We're here to help you find the perfect products for your needs.</p>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white p-12 rounded-2xl">
+                <h2 class="text-3xl font-bold mb-4">Ready to Discover Amazing Products?</h2>
+                <p class="text-xl mb-8">Join thousands of satisfied customers who trust shopinestllc for their shopping needs.</p>
+                <div class="space-x-4">
+                    <a href="index.html" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                        Browse Products
+                    </a>
+                    <a href="contact.html" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 pb-64">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-4">shopinestllc</h3>
+                <p class="text-gray-300">Your trusted partner for discovering premium products on Amazon.</p>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-400">&copy; 2025 shopinestllc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
+

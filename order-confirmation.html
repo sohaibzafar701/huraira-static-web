@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - shopinestllc</title>
+    <meta name="description" content="Complete your order at shopinestllc. Fast and secure checkout with cash on delivery.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        
+        body {
+            padding-bottom: 12rem;
+            min-height: 100vh;
+        }
+        
+        html {
+            min-height: 100vh;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 16rem;
+            }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #8b5cf6, #ec4899);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #7c3aed, #db2777);
+        }
+        
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .form-input:focus {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 pt-20">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-xl fixed top-0 left-0 right-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-2 group">
+                    <div class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <i class="fas fa-store text-white text-sm md:text-xl"></i>
+                    </div>
+                    <span class="text-lg md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hidden sm:block">shopinestllc</span>
+                </a>
+                
+                <button id="mobile-menu-button" class="md:hidden w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-all duration-200 group">
+                    <i class="fas fa-bars text-gray-600 text-lg group-hover:text-blue-600 transition-colors duration-200"></i>
+                </button>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="relative group">
+                        <span class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">Home</span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="about.html" class="relative group">
+                        <span class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">About</span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="contact.html" class="relative group">
+                        <span class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">Contact</span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-gradient-to-b from-white to-gray-50">
+                <div class="py-6 px-4">
+                    <div class="space-y-3">
+                        <a href="index.html" class="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-200">
+                                <i class="fas fa-home text-blue-600 text-lg"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-200">Home</span>
+                        </a>
+                        <a href="about.html" class="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-200">
+                                <i class="fas fa-info-circle text-blue-600 text-lg"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium group-hover:text-blue-600 transition-colors duration-200">About</span>
+                        </a>
+                        <a href="contact.html" class="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group">
+                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors duration-200">
+                                <i class="fas fa-envelope text-green-600 text-lg"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium group-hover:text-green-600 transition-colors duration-200">Contact</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12" style="padding-top: 6rem;">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Complete Your Order</h1>
+            <p class="text-lg md:text-xl text-blue-100">Fill in your details to proceed with your purchase</p>
+        </div>
+    </section>
+
+    <!-- Order Confirmation Section -->
+    <section class="py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Product Summary -->
+                <div class="md:col-span-1">
+                    <div class="bg-white rounded-xl shadow-lg p-6 sticky top-24">
+                        <h2 class="text-xl font-bold mb-4 text-gray-800">Order Summary</h2>
+                        <div id="product-summary" class="space-y-4">
+                            <!-- Product will be populated by JavaScript -->
+                        </div>
+                        <div class="border-t border-gray-200 mt-6 pt-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-600 font-medium">Payment Method:</span>
+                                <span class="text-gray-900 font-semibold">Cash on Delivery</span>
+                            </div>
+                            <div class="mt-4 p-3 bg-green-50 rounded-lg border border-green-200">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-check-circle text-green-600"></i>
+                                    <span class="text-sm text-green-800 font-medium">Pay when you receive your order</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Form -->
+                <div class="md:col-span-2">
+                    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl font-bold mb-6 text-gray-800">Personal Information</h2>
+                        
+                        <form id="order-form" class="space-y-6" onsubmit="handleOrderSubmit(event)">
+                            <!-- Personal Information Section -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-gray-700 flex items-center space-x-2">
+                                    <i class="fas fa-user text-blue-600"></i>
+                                    <span>Contact Details</span>
+                                </h3>
+                                
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="full_name" class="block text-gray-700 font-medium mb-2">Full Name <span class="text-red-500">*</span></label>
+                                        <input type="text" id="full_name" name="full_name" required 
+                                               class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="email" class="block text-gray-700 font-medium mb-2">Email Address <span class="text-red-500">*</span></label>
+                                        <input type="email" id="email" name="email" required 
+                                               class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number <span class="text-red-500">*</span></label>
+                                        <input type="tel" id="phone" name="phone" required 
+                                               class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                               placeholder="+1 (555) 123-4567">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="alternate_phone" class="block text-gray-700 font-medium mb-2">Alternate Phone (Optional)</label>
+                                        <input type="tel" id="alternate_phone" name="alternate_phone" 
+                                               class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Address Section -->
+                            <div class="space-y-4 pt-6 border-t border-gray-200">
+                                <h3 class="text-lg font-semibold text-gray-700 flex items-center space-x-2">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                    <span>Delivery Address</span>
+                                </h3>
+                                
+                                <div>
+                                    <label for="street_address" class="block text-gray-700 font-medium mb-2">Street Address <span class="text-red-500">*</span></label>
+                                    <input type="text" id="street_address" name="street_address" required 
+                                           class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                           placeholder="123 Main Street">
+                                </div>
+                                
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="city" class="block text-gray-700 font-medium mb-2">City <span class="text-red-500">*</span></label>
+                                        <input type="text" id="city" name="city" required 
+                                               class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="state" class="block text-gray-700 font-medium mb-2">State/Province <span class="text-red-500">*</span></label>
+                                        <input type="text" id="state" name="state" required 
+                                               class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="zip_code" class="block text-gray-700 font-medium mb-2">ZIP/Postal Code <span class="text-red-500">*</span></label>
+                                        <input type="text" id="zip_code" name="zip_code" required 
+                                               class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="country" class="block text-gray-700 font-medium mb-2">Country <span class="text-red-500">*</span></label>
+                                        <input type="text" id="country" name="country" required 
+                                               class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                               value="United States">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="delivery_instructions" class="block text-gray-700 font-medium mb-2">Delivery Instructions (Optional)</label>
+                                    <textarea id="delivery_instructions" name="delivery_instructions" rows="3" 
+                                              class="form-input w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                              placeholder="Any special instructions for delivery..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Cash on Delivery Option -->
+                            <div class="pt-6 border-t border-gray-200">
+                                <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
+                                    <div class="flex items-start space-x-3">
+                                        <input type="checkbox" id="cod_agreement" name="cod_agreement" required checked
+                                               class="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                        <div>
+                                            <label for="cod_agreement" class="text-gray-700 font-medium cursor-pointer">
+                                                I agree to pay cash on delivery
+                                            </label>
+                                            <p class="text-sm text-gray-600 mt-1">
+                                                You will pay the full amount when the product is delivered to your address.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="pt-6">
+                                <button type="submit" class="submit-button w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-shopping-cart mr-2"></i>
+                                    Confirm Order
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 pb-64">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">shopinestllc</h3>
+                    <p class="text-gray-300">Your trusted partner for discovering premium products.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="index.html" class="block text-gray-300 hover:text-white">Home</a>
+                        <a href="about.html" class="block text-gray-300 hover:text-white">About</a>
+                        <a href="contact.html" class="block text-gray-300 hover:text-white">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Categories</h4>
+                    <div class="space-y-2">
+                        <a href="category.html?id=1" class="block text-gray-300 hover:text-white">Electronics</a>
+                        <a href="category.html?id=2" class="block text-gray-300 hover:text-white">Fashion</a>
+                        <a href="category.html?id=3" class="block text-gray-300 hover:text-white">Home & Garden</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-envelope mr-2"></i>support@shopinestllc.com</p>
+                        <p><i class="fas fa-phone mr-2"></i>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 shopinestllc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get URL parameters
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                product_id: params.get('product_id') || '',
+                product_name: decodeURIComponent(params.get('product_name') || ''),
+                product_image: decodeURIComponent(params.get('product_image') || '')
+            };
+        }
+
+        // Populate product summary
+        function populateProductSummary() {
+            const params = getUrlParams();
+            const productSummary = document.getElementById('product-summary');
+
+            if (!params.product_id || !params.product_name) {
+                productSummary.innerHTML = `
+                    <div class="text-center py-8">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 text-4xl mb-4"></i>
+                        <p class="text-gray-600">No product selected. Please return to the product page.</p>
+                        <a href="index.html" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                            Go to Homepage
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            productSummary.innerHTML = `
+                <div class="flex items-start space-x-4">
+                    <img src="${params.product_image}" alt="${params.product_name}" 
+                         class="w-20 h-20 object-cover rounded-lg"
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5YWFhYSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+'">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-gray-800 mb-1">${params.product_name}</h3>
+                        <p class="text-sm text-gray-600">Product ID: ${params.product_id}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Handle form submission
+        function handleOrderSubmit(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = {
+                full_name: document.getElementById('full_name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                alternate_phone: document.getElementById('alternate_phone').value,
+                street_address: document.getElementById('street_address').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                zip_code: document.getElementById('zip_code').value,
+                country: document.getElementById('country').value,
+                delivery_instructions: document.getElementById('delivery_instructions').value,
+                cod_agreement: document.getElementById('cod_agreement').checked,
+                product_id: getUrlParams().product_id,
+                product_name: getUrlParams().product_name
+            };
+
+            // Show success message (for static site, you could redirect to a thank you page)
+            alert('Order confirmed! Your order has been received. You will be contacted soon for delivery. Order ID: ' + Date.now());
+            
+            // In a real application, you would send this data to a server
+            console.log('Order submitted:', formData);
+
+            // Reset form
+            document.getElementById('order-form').reset();
+            
+            // Redirect to home after 2 seconds
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            populateProductSummary();
+        });
+    </script>
+</body>
+</html>
